@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		554893581CAD113000D122BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 554893571CAD113000D122BA /* main.m */; };
+		5548935B1CAD113000D122BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5548935A1CAD113000D122BA /* AppDelegate.m */; };
+		5548935E1CAD113000D122BA /* ArticleRepository.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5548935C1CAD113000D122BA /* ArticleRepository.xcdatamodeld */; };
+		554893611CAD113000D122BA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554893601CAD113000D122BA /* MasterViewController.m */; };
+		554893641CAD113000D122BA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554893631CAD113000D122BA /* DetailViewController.m */; };
+		554893671CAD113000D122BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554893651CAD113000D122BA /* Main.storyboard */; };
+		554893691CAD113000D122BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554893681CAD113000D122BA /* Assets.xcassets */; };
+		5548936C1CAD113000D122BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5548936A1CAD113000D122BA /* LaunchScreen.storyboard */; };
+		554893771CAD113000D122BA /* ArticleRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 554893761CAD113000D122BA /* ArticleRepositoryTests.m */; };
+		554893821CAD113000D122BA /* ArticleRepositoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 554893811CAD113000D122BA /* ArticleRepositoryUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		554893731CAD113000D122BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5548934B1CAD113000D122BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 554893521CAD113000D122BA;
+			remoteInfo = ArticleRepository;
+		};
+		5548937E1CAD113000D122BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5548934B1CAD113000D122BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 554893521CAD113000D122BA;
+			remoteInfo = ArticleRepository;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		554893531CAD113000D122BA /* ArticleRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticleRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		554893571CAD113000D122BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		554893591CAD113000D122BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5548935A1CAD113000D122BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5548935D1CAD113000D122BA /* ArticleRepository.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArticleRepository.xcdatamodel; sourceTree = "<group>"; };
+		5548935F1CAD113000D122BA /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		554893601CAD113000D122BA /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		554893621CAD113000D122BA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		554893631CAD113000D122BA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		554893661CAD113000D122BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		554893681CAD113000D122BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5548936B1CAD113000D122BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5548936D1CAD113000D122BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		554893721CAD113000D122BA /* ArticleRepositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArticleRepositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		554893761CAD113000D122BA /* ArticleRepositoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleRepositoryTests.m; sourceTree = "<group>"; };
+		554893781CAD113000D122BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5548937D1CAD113000D122BA /* ArticleRepositoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArticleRepositoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		554893811CAD113000D122BA /* ArticleRepositoryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleRepositoryUITests.m; sourceTree = "<group>"; };
+		554893831CAD113000D122BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		554893501CAD113000D122BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5548936F1CAD113000D122BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5548937A1CAD113000D122BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5548934A1CAD113000D122BA = {
+			isa = PBXGroup;
+			children = (
+				554893551CAD113000D122BA /* ArticleRepository */,
+				554893751CAD113000D122BA /* ArticleRepositoryTests */,
+				554893801CAD113000D122BA /* ArticleRepositoryUITests */,
+				554893541CAD113000D122BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		554893541CAD113000D122BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				554893531CAD113000D122BA /* ArticleRepository.app */,
+				554893721CAD113000D122BA /* ArticleRepositoryTests.xctest */,
+				5548937D1CAD113000D122BA /* ArticleRepositoryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		554893551CAD113000D122BA /* ArticleRepository */ = {
+			isa = PBXGroup;
+			children = (
+				554893591CAD113000D122BA /* AppDelegate.h */,
+				5548935A1CAD113000D122BA /* AppDelegate.m */,
+				5548935F1CAD113000D122BA /* MasterViewController.h */,
+				554893601CAD113000D122BA /* MasterViewController.m */,
+				554893621CAD113000D122BA /* DetailViewController.h */,
+				554893631CAD113000D122BA /* DetailViewController.m */,
+				554893651CAD113000D122BA /* Main.storyboard */,
+				554893681CAD113000D122BA /* Assets.xcassets */,
+				5548936A1CAD113000D122BA /* LaunchScreen.storyboard */,
+				5548936D1CAD113000D122BA /* Info.plist */,
+				5548935C1CAD113000D122BA /* ArticleRepository.xcdatamodeld */,
+				554893561CAD113000D122BA /* Supporting Files */,
+			);
+			path = ArticleRepository;
+			sourceTree = "<group>";
+		};
+		554893561CAD113000D122BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				554893571CAD113000D122BA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		554893751CAD113000D122BA /* ArticleRepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				554893761CAD113000D122BA /* ArticleRepositoryTests.m */,
+				554893781CAD113000D122BA /* Info.plist */,
+			);
+			path = ArticleRepositoryTests;
+			sourceTree = "<group>";
+		};
+		554893801CAD113000D122BA /* ArticleRepositoryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				554893811CAD113000D122BA /* ArticleRepositoryUITests.m */,
+				554893831CAD113000D122BA /* Info.plist */,
+			);
+			path = ArticleRepositoryUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		554893521CAD113000D122BA /* ArticleRepository */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 554893861CAD113000D122BA /* Build configuration list for PBXNativeTarget "ArticleRepository" */;
+			buildPhases = (
+				5548934F1CAD113000D122BA /* Sources */,
+				554893501CAD113000D122BA /* Frameworks */,
+				554893511CAD113000D122BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArticleRepository;
+			productName = ArticleRepository;
+			productReference = 554893531CAD113000D122BA /* ArticleRepository.app */;
+			productType = "com.apple.product-type.application";
+		};
+		554893711CAD113000D122BA /* ArticleRepositoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 554893891CAD113000D122BA /* Build configuration list for PBXNativeTarget "ArticleRepositoryTests" */;
+			buildPhases = (
+				5548936E1CAD113000D122BA /* Sources */,
+				5548936F1CAD113000D122BA /* Frameworks */,
+				554893701CAD113000D122BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				554893741CAD113000D122BA /* PBXTargetDependency */,
+			);
+			name = ArticleRepositoryTests;
+			productName = ArticleRepositoryTests;
+			productReference = 554893721CAD113000D122BA /* ArticleRepositoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5548937C1CAD113000D122BA /* ArticleRepositoryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5548938C1CAD113000D122BA /* Build configuration list for PBXNativeTarget "ArticleRepositoryUITests" */;
+			buildPhases = (
+				554893791CAD113000D122BA /* Sources */,
+				5548937A1CAD113000D122BA /* Frameworks */,
+				5548937B1CAD113000D122BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5548937F1CAD113000D122BA /* PBXTargetDependency */,
+			);
+			name = ArticleRepositoryUITests;
+			productName = ArticleRepositoryUITests;
+			productReference = 5548937D1CAD113000D122BA /* ArticleRepositoryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5548934B1CAD113000D122BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Elizabeth;
+				TargetAttributes = {
+					554893521CAD113000D122BA = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					554893711CAD113000D122BA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 554893521CAD113000D122BA;
+					};
+					5548937C1CAD113000D122BA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 554893521CAD113000D122BA;
+					};
+				};
+			};
+			buildConfigurationList = 5548934E1CAD113000D122BA /* Build configuration list for PBXProject "ArticleRepository" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5548934A1CAD113000D122BA;
+			productRefGroup = 554893541CAD113000D122BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				554893521CAD113000D122BA /* ArticleRepository */,
+				554893711CAD113000D122BA /* ArticleRepositoryTests */,
+				5548937C1CAD113000D122BA /* ArticleRepositoryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		554893511CAD113000D122BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5548936C1CAD113000D122BA /* LaunchScreen.storyboard in Resources */,
+				554893691CAD113000D122BA /* Assets.xcassets in Resources */,
+				554893671CAD113000D122BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554893701CAD113000D122BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5548937B1CAD113000D122BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5548934F1CAD113000D122BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554893641CAD113000D122BA /* DetailViewController.m in Sources */,
+				554893611CAD113000D122BA /* MasterViewController.m in Sources */,
+				5548935B1CAD113000D122BA /* AppDelegate.m in Sources */,
+				554893581CAD113000D122BA /* main.m in Sources */,
+				5548935E1CAD113000D122BA /* ArticleRepository.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5548936E1CAD113000D122BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554893771CAD113000D122BA /* ArticleRepositoryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554893791CAD113000D122BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554893821CAD113000D122BA /* ArticleRepositoryUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		554893741CAD113000D122BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 554893521CAD113000D122BA /* ArticleRepository */;
+			targetProxy = 554893731CAD113000D122BA /* PBXContainerItemProxy */;
+		};
+		5548937F1CAD113000D122BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 554893521CAD113000D122BA /* ArticleRepository */;
+			targetProxy = 5548937E1CAD113000D122BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		554893651CAD113000D122BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				554893661CAD113000D122BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5548936A1CAD113000D122BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5548936B1CAD113000D122BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		554893841CAD113000D122BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		554893851CAD113000D122BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		554893871CAD113000D122BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ArticleRepository/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfc.ArticleRepository;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		554893881CAD113000D122BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ArticleRepository/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfc.ArticleRepository;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5548938A1CAD113000D122BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ArticleRepositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfc.ArticleRepositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArticleRepository.app/ArticleRepository";
+			};
+			name = Debug;
+		};
+		5548938B1CAD113000D122BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ArticleRepositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfc.ArticleRepositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArticleRepository.app/ArticleRepository";
+			};
+			name = Release;
+		};
+		5548938D1CAD113000D122BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ArticleRepositoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfc.ArticleRepositoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ArticleRepository;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5548938E1CAD113000D122BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ArticleRepositoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hfc.ArticleRepositoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ArticleRepository;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5548934E1CAD113000D122BA /* Build configuration list for PBXProject "ArticleRepository" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				554893841CAD113000D122BA /* Debug */,
+				554893851CAD113000D122BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		554893861CAD113000D122BA /* Build configuration list for PBXNativeTarget "ArticleRepository" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				554893871CAD113000D122BA /* Debug */,
+				554893881CAD113000D122BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		554893891CAD113000D122BA /* Build configuration list for PBXNativeTarget "ArticleRepositoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5548938A1CAD113000D122BA /* Debug */,
+				5548938B1CAD113000D122BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5548938C1CAD113000D122BA /* Build configuration list for PBXNativeTarget "ArticleRepositoryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5548938D1CAD113000D122BA /* Debug */,
+				5548938E1CAD113000D122BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5548935C1CAD113000D122BA /* ArticleRepository.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5548935D1CAD113000D122BA /* ArticleRepository.xcdatamodel */,
+			);
+			currentVersion = 5548935D1CAD113000D122BA /* ArticleRepository.xcdatamodel */;
+			path = ArticleRepository.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5548934B1CAD113000D122BA /* Project object */;
+}
