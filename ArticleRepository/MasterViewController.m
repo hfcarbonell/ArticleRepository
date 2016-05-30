@@ -19,11 +19,44 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    [self loadArticles];
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
+
+-(void)loadArticles{
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:[NSURL URLWithString:@"https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty"]
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error) {
+                // handle response
+                if(data.length > 0 && error == nil){
+                    NSArray *dictn = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+                    for (int i = 0; i < [dictn count]; i++){
+                        NSString *urlString = @"https://hacker-news.firebaseio.com/v0/item/";
+                        urlString = [urlString stringByAppendingString:[NSString stringWithFormat:@"%@",[dictn objectAtIndex:i]]];
+                        urlString= [urlString stringByAppendingString:@".json?print=pretty"];
+                        [[session dataTaskWithURL:[NSURL URLWithString:urlString]
+                                completionHandler:^(NSData *data,
+                                                    NSURLResponse *response,
+                                                    NSError *error) {
+                                    NSDictionary *dictn = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+                                    //[self.pickerDetails addObject:dictn];
+                                    [self insertNewObject:dictn];
+                                    NSLog(@"Adding: %@", [dictn objectForKey:@"title"]);
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        [self.view reloadInputViews];
+                                    });
+                                }]resume];
+                    }
+                }
+                
+                NSLog(@"Initial call handler completed");
+                
+            }] resume];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
@@ -35,15 +68,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender {
+- (void)insertNewObject:(NSDictionary*)sender {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSSet *objs = [context registeredObjects];
+    for(NSManagedObject *object in objs){
+        if([object valueForKey:@"id"] == [sender valueForKey:@"id"]){
+            NSLog(@"Already have object in store: %@", [sender objectForKey:@"title"]);
+            return;
+        }
+    }
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
         
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-        
+    [newManagedObject setValue:[sender objectForKey:@"title"] forKey:@"title"];
+    [newManagedObject setValue:[sender objectForKey:@"url"] forKey:@"url"];
+    [newManagedObject setValue:[sender objectForKey:@"id"] forKey:@"id"];
     // Save the context.
     NSError *error = nil;
     if (![context save:&error]) {
@@ -106,7 +147,7 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[object valueForKey:@"title"] description];
 }
 
 #pragma mark - Fetched results controller
@@ -123,16 +164,16 @@
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
+    [fetchRequest setFetchBatchSize:100];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
 
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Stories"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     

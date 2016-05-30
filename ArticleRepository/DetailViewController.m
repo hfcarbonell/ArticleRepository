@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController ()
+@property (strong, nonatomic) IBOutlet UIWebView *SiteView;
 
 @end
 
@@ -28,7 +29,9 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        NSURL *url = [NSURL URLWithString:[[self.detailItem valueForKey:@"url"] description]];
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+        [_SiteView loadRequest:requestObj];
     }
 }
 
